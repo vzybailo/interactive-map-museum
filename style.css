@@ -1,0 +1,281 @@
+.map {
+    font-family: monospace;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.map__wrapper {
+    border: 3px solid;
+    display: flex;
+    justify-content: space-between;
+}
+.map__block {
+    flex-grow: 1;
+}
+.map__parking {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.map__moto {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.map__moto:first-child {
+    margin-top: 0;
+    border-top: 1px dashed;
+}
+.map__main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    text-align: center;
+    align-items: stretch;
+}
+.map__main-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.map__main-block.racing {
+    border-right: dashed 1px;
+    transition: 0.2s; 
+}
+.map__main-block.vans {
+    border-right: dashed 1px;
+    transition: 0.2s;
+}
+.map__main-block.classic-cars {
+    grid-column: span 3;
+    border-top: #000 1px dashed;
+    border-bottom: #000 1px dashed;
+    transition: 0.2s;
+}
+.map__main-block.trucks {
+    grid-column: span 2;
+    border-top: #000 1px dashed;
+    border-right: 1px dashed;
+    transition: 0.2s;
+}
+.map__main-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.screen-pops {
+    grid-column: span 2;
+    border-left: #000 1px dashed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    cursor: click;
+    transition: 0.2s;
+}
+.hover:hover {
+    background-color: #FF0101;
+    transition: .4s;
+    color: #fff;
+    font-weight: 700;
+}
+.corvettes {
+    padding: 20px;
+    transition: 0.2s;
+}
+.moto {
+       border-right: #000 1px dashed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+.screen-used {
+    writing-mode: vertical-lr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-left: #000 1px dashed;
+    padding: 0 20px;
+    transition: 0.2s;
+}
+.map__main-block.military {
+    border-top: 1px dashed;
+    transition: 0.2s;
+}
+.map__block.entry-space {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.2s;
+}
+.map__entry,
+.map__event-space {
+    writing-mode: vertical-lr;
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.map__entry {
+    border-left: 3px solid;
+    border-bottom: 3px solid;
+    background-color: aliceblue;
+    box-sizing: border-box;
+    flex-grow: 2;
+}
+.map__entry:hover {
+    font-weight: 700;
+    background-color: lightblue;
+}
+.map__entry:before {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 25px;
+  position: absolute;
+    top: 0;
+    left: 0;
+}
+.map__event-space {
+    position: relative;
+    transition: 0.2s;
+}
+.map__event-space:before {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 25px;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.map__event-space:after {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 25px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.map__footer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.map__footer-brick {
+    position: relative;
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    border: 3px solid;
+    border-top: 0;
+}
+.map__footer-track {
+    grid-column: span 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    position: relative;
+}
+.map__footer-brick:before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: -3px;
+    left: 70%;
+}
+.map__footer-brick:after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: -3px;
+    left: 7%;
+}
+.map__footer-brick:hover {
+    border: 3px solid;
+    border-top: 0;
+}
+img.race-track {
+    width: 50px;
+    margin-right: 20px;
+}
+img.parking-sign {
+    width: 40px;
+    margin-right: 20px;
+}
+.map__footer-track-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+img.arrow-down {
+    transform: rotate(90deg);
+    width: 30px;
+    animation: bounceDown 1.5s infinite ease-in-out;
+}
+.map__parking-content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+img.arrow-up {
+    transform: rotate(-90deg);
+    width: 30px;
+    animation: bounceUp 1.5s infinite ease-in-out;
+}
+.map__main-block.racing {
+    display: flex;
+    flex-direction: row;
+}
+.map__main-block.racing:hover .info-marker {
+    display: block;
+}
+.info-marker {
+    width: 20px;
+    margin-left: 10px;
+    display: none;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+@keyframes bounceUp {
+    0%, 100% {
+        transform: rotate(-90deg) translateX(0);
+    }
+    50% {
+        transform: rotate(-90deg) translateX(5px);
+    }
+}
+@keyframes bounceDown {
+    0%, 100% {
+        transform: rotate(90deg) translateX(0);
+    }
+    50% {
+        transform: rotate(90deg) translateX(5px);
+    }
+}
