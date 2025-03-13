@@ -134,6 +134,7 @@
     justify-content: center;
 }
 .map__entry {
+    position: relative;
     border-left: 3px solid;
     border-bottom: 3px solid;
     background-color: aliceblue;
@@ -148,10 +149,21 @@
     content: "";
     display: block;
     width: 3px;
-    height: 25px;
-  position: absolute;
-    top: 0;
-    left: 0;
+    height: 48px;
+    position: absolute;
+    right: -3px;
+    background-color: #fff;
+    top: 10px;
+}
+.map__entry:after {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 30px;
+    position: absolute;
+    left: -3px;
+    background-color: #fff;
+    top: 40px;
 }
 .map__event-space {
     position: relative;
@@ -190,8 +202,10 @@
     justify-content: center;
     align-items: center;
     padding: 50px;
-    border: 3px solid;
+    border: 3px solid #000;
     border-top: 0;
+    transition: .3s;
+    transition: transform 0.6s ease-in-out;
 }
 .map__footer-track {
     grid-column: span 4;
@@ -220,10 +234,6 @@
     position: absolute;
     top: -3px;
     left: 7%;
-}
-.map__footer-brick:hover {
-    border: 3px solid;
-    border-top: 0;
 }
 img.race-track {
     width: 50px;
@@ -268,19 +278,45 @@ img.arrow-up {
     cursor: pointer;
     transform: scale(1.1);
 }
+.lego-icon {
+    width: 40px;
+    margin-right: 15px;
+}
+img.entry-icon {
+    width: 30px;
+    position: absolute;
+    right: -15px;
+    top: 20px;
+}
+.modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    font-family: monospace;
+}
+div#modal-text {
+    display: flex;
+    align-items: center;
+}
+.modal-content {
+    padding: 20px 0;
+}
+#modal-text:before {
+    content: "";
+    display: block;
+    width: 30px;  
+    height: 30px; 
+    background-image: url(images/info-red.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+}
 @keyframes bounceUp {
-    0%, 100% {
-        transform: rotate(-90deg) translateX(0);
-    }
-    50% {
-        transform: rotate(-90deg) translateX(5px);
-    }
+    0%, 100% {transform: rotate(-90deg) translateX(0);}
+    50% {transform: rotate(-90deg) translateX(5px);}
 }
 @keyframes bounceDown {
-    0%, 100% {
-        transform: rotate(90deg) translateX(0);
-    }
-    50% {
-        transform: rotate(90deg) translateX(5px);
-    }
+    0%, 100% {transform: rotate(90deg) translateX(0);}
+    50% {transform: rotate(90deg) translateX(5px);}
 }

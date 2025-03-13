@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
     <title>Map</title>
 </head>
 <body>
@@ -18,23 +19,23 @@
             </div>
             <div class="map__wrapper">
                 <div class="map__block moto">
-                    <div class="map__moto hover">Motorcycles</div>
-                    <div class="map__moto hover">Agriculture</div>
+                    <div class="info-block map__moto hover" data-info="Info about moto">Motorcycles</div>
+                    <div class="info-block map__moto hover" data-info="Info about agriculture">Agriculture</div>
                 </div>
                 <div class="map__block">
                     <div class="map__main">
-                        <div class="map__main-block racing hover">
+                        <div class="info-block map__main-block racing hover" data-info="Info about racing">
                             <span>Racing</span> 
                             <img src="images/info.svg" class="info-marker">
                         </div>
-                        <div class="map__main-block vans hover">Vans & Buses</div>
-                        <div class="map__main-block antique hover">Antiques</div>
-                        <div class="map__main-block trucks hover">Trucks & SUVs</div>
-                        <div class="map__main-block military hover">
+                        <div class="info-block map__main-block vans hover" data-info="Info about vans and buses">Vans & Buses</div>
+                        <div class="info-block map__main-block antique hover" data-info="Info about antiques">Antiques</div>
+                        <div class="info-block map__main-block trucks hover" data-info="Info about tr and SUVs">Trucks & SUVs</div>
+                        <div class="info-block map__main-block military hover" data-info="Info about military and boats">
                             <span>Military & Emergency</span>
                             <span>Boats</span>
                         </div>
-                        <div class="map__main-block classic-cars hover">
+                        <div class="info-block map__main-block classic-cars hover" data-info="Info about classics and muscle cars">
                             <span>Classics</span>
                             <div>
                                 Muscle car 
@@ -42,20 +43,24 @@
                         </div>
                     </div>
                     <div class="map__main-bottom">
-                        <span class="corvettes hover">Corvettes</span>
-                        <span class="screen-pops hover">Screen used props</span>
+                        <span class="info-block corvettes hover" data-info="Info about Corvettes">Corvettes</span>
+                        <span class="info-block screen-pops hover" data-info="Info about Screen used props">Screen used props</span>
                     </div>
                 </div>
-                <div class="map__block screen-used hover">Screen used vehicles</div>
+                <div class="info-block map__block screen-used hover" data-info="Info about screen used vehicles">Screen used vehicles</div>
                 <div class="map__block entry-space">
                     <div class="map__entry">
                         <span>Lobby</span>
+                        <img src="images/entrance.jpg" alt="entry-icon" class="entry-icon">
                     </div>
-                    <div class="map__event-space hover">Event space</div>
+                    <div class="info-block map__event-space hover" data-info="Info about event space">Event space</div>
                 </div>
             </div>
             <div class="map__footer">
-                <div class="map__footer-brick hover">Brick-seum</div>
+                <div class="info-block map__footer-brick hover" data-info="Info about Brick City">
+                    <img src="images/lego.png" alt="" class="lego-icon">
+                    Brick City
+                </div>
                 <div class="map__footer-track">
                     <img src="images/race-track.webp" alt="" class="race-track">
                     <div class="map__footer-track-content">
@@ -63,6 +68,12 @@
                         <img src="images/chevron.png" alt="" class="arrow-down">
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="modal" id="infoModal">
+            <div class="modal-content">
+                <span class="close"></span>
+                <div id="modal-text"></div>
             </div>
         </div>
     </div>
