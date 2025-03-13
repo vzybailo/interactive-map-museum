@@ -31,6 +31,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 20px;
 }
 .map__moto:first-child {
     margin-top: 0;
@@ -90,6 +91,7 @@
     transition: .4s;
     color: #fff;
     font-weight: 700;
+    cursor: pointer;
 }
 .corvettes {
     padding: 20px;
@@ -102,6 +104,7 @@
     justify-content: center;
     align-items: center;
     transition: 0.2s;
+    padding: 0 20px;
 }
 .screen-used {
     writing-mode: vertical-lr;
@@ -140,6 +143,7 @@
     background-color: aliceblue;
     box-sizing: border-box;
     flex-grow: 2;
+    padding: 20px;
 }
 .map__entry:hover {
     font-weight: 700;
@@ -319,4 +323,9 @@ div#modal-text {
 @keyframes bounceDown {
     0%, 100% {transform: rotate(90deg) translateX(0);}
     50% {transform: rotate(90deg) translateX(5px);}
+}
+@media screen and (max-width: 480px) {
+    .map__wrapper {
+        width: fit-content;
+    }
 }
