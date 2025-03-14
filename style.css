@@ -26,7 +26,7 @@
 .map__moto {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
-    flex-grow: 1;
+    /* flex-grow: 1; */
     display: flex;
     justify-content: center;
     align-items: center;
