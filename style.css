@@ -13,9 +13,6 @@
     display: flex;
     justify-content: space-between;
 }
-.map__block {
-    flex-grow: 1;
-}
 .map__parking {
     display: flex;
     justify-content: center;
@@ -26,7 +23,6 @@
 .map__moto {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
-    flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
