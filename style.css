@@ -197,7 +197,6 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     text-transform: uppercase;
-    font-size: 16px;
 }
 .map__footer-brick {
     position: relative;
@@ -325,7 +324,54 @@ div#modal-text {
     50% {transform: rotate(90deg) translateX(5px);}
 }
 @media screen and (max-width: 480px) {
+    .map {
+        font-size: 12px;
+    }
     .map__wrapper {
         width: fit-content;
+    }
+    .map__main-block,
+    .screen-used,
+    .map__entry {
+        padding: 10px;
+    }
+    .moto {
+        padding: 0 5px;
+    }
+    .map__moto {
+        padding: 5px;
+    }
+    .map__footer-track {
+        padding: 20px;
+    }
+    span {
+        text-align: center;
+    }
+    .map__footer-brick {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .lego-icon {
+        margin-right: 0;
+        width: 35px;
+    }
+    img.race-track {
+        width: 40px;
+        margin-right: 10;
+    }
+    img.parking-sign {
+        width: 30px;
+    }
+    img.entry-icon {
+        width: 22px;
+        right: -3px;
+    }
+    .map__footer-brick:before,
+    .map__footer-brick:after {
+        width: 25px;
+    }
+    .map__parking,
+    .map__footer-track {
+        padding: 10px;
     }
 }
