@@ -26,12 +26,14 @@
 .map__moto {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
-    /* flex-grow: 1; */
+    flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 20px;
+    max-width: 100%;
+    flex-shrink: 0;
 }
 .map__moto:first-child {
     margin-top: 0;
