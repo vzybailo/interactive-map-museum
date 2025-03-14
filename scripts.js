@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         block.addEventListener("click", function () {
             const info = this.getAttribute("data-info");
             modalText.textContent = info;
-            modal.style.display = "flex";
+            modal.style.display = "block";
         });
     });
 
